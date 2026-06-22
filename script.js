@@ -16,6 +16,23 @@ const message = result.querySelector(".message");
 const fish = document.querySelector(".main-fish");
 const extraFish = document.querySelector(".extra-fish");
 
+function createConfetti() {
+  const colors = ['#ffdd66', '#fff6b3', '#4b86db', '#1f488f', '#FFD700', '#FFA500'];
+  const confettiCount = 50;
+  
+  for (let i = 0; i < confettiCount; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = Math.random() * 100 + '%';
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    confetti.style.setProperty('--tx', (Math.random() - 0.5) * 200 + 'px');
+    confetti.style.animation = `confettiFall ${2 + Math.random() * 2}s linear forwards`;
+    document.body.appendChild(confetti);
+    
+    setTimeout(() => confetti.remove(), 4000);
+  }
+}
+
 fortuneButton.addEventListener("click", () => {
   const choice = fortunes[Math.floor(Math.random() * fortunes.length)];
   message.textContent = choice;
@@ -25,6 +42,7 @@ spinButton.addEventListener("click", () => {
   fish.classList.remove("spin");
   void fish.offsetWidth;
   fish.classList.add("spin");
+  createConfetti();
 });
 
 nopeButton.addEventListener("click", () => {

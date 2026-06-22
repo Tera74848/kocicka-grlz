@@ -561,6 +561,26 @@ button.danger {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(var(--tx)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  top: 0;
+  z-index: 999;
+}
+
 @media (max-width: 640px) {
   .fish {
     width: 180px;
