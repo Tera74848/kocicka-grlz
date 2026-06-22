@@ -15,8 +15,7 @@ body {
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  background: radial-gradient(circle at top, rgba(138, 218, 255, 0.35), transparent 25%),
-    linear-gradient(180deg, #0a3a58 0%, #0c4f71 28%, #06354d 70%, #021821 100%);
+  background: url("pozadi.png") center center / cover no-repeat;
   background-attachment: fixed;
 }
 
