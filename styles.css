@@ -387,9 +387,10 @@ button.danger {
 
 .extra-fish .speech {
   position: absolute;
-  top: -58px;
-  left: -14px;
-  width: 220px;
+  top: -80px;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  width: 180px;
   padding: 0.7rem 1rem;
   background: rgba(255, 255, 255, 0.95);
   color: #1f3a59;
@@ -399,13 +400,12 @@ button.danger {
   line-height: 1.35;
   z-index: 2;
   opacity: 0;
-  transform: translateY(10px);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .extra-fish.visible .speech {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 .extra-fish .speech::after {
