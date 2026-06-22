@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veštírna u rybičky</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ocean">
+    <div class="bubbles">
+      <span style="--i:1"></span>
+      <span style="--i:2"></span>
+      <span style="--i:3"></span>
+      <span style="--i:4"></span>
+      <span style="--i:5"></span>
+      <span style="--i:6"></span>
+    </div>
+    <div class="container">
+      <header>
+        <h1>Veštírna u rybičky</h1>
+        <p>Stiskni tlačítko a zlatá rybka ti prozradí budoucnost.</p>
+      </header>
+
+      <div class="pond">
+        <div class="seaweed seaweed-1"></div>
+        <div class="seaweed seaweed-2"></div>
+        <div class="coral coral-1"></div>
+        <div class="coral coral-2"></div>
+        <div class="fish main-fish">
+          <div class="fin top"></div>
+          <div class="fin bottom"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+          <div class="tail"></div>
+          <div class="scale scale-1"></div>
+          <div class="scale scale-2"></div>
+          <div class="scale scale-3"></div>
+        </div>
+        <div class="fish extra-fish" aria-hidden="true">
+          <div class="speech">Blbý, to je tvoje budoucnost.</div>
+          <div class="fin top"></div>
+          <div class="fin bottom"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+          <div class="tail"></div>
+          <div class="scale scale-1"></div>
+          <div class="scale scale-2"></div>
+          <div class="scale scale-3"></div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="fortuneButton">Zeptej se rybičky</button>
+        <button id="spinButton" class="secondary">Super</button>
+        <button id="nopeButton" class="danger">To není super</button>
+      </div>
+
+      <section class="result" id="result">
+        <div class="message">Rybička čeká, až stiskne tlačítko...</div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
